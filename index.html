@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReserveRight - Create an Account</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="title">BestReservation</h1>
+    <p id="description">Create an account and find the best bookings</p>
+    <form method="post" action="https://formspree.io/f/xbljjnvp" id="survey-form">
+        <fieldset>
+            <label id="name-label" for="name">Name</label>
+            <input placeholder="Enter your name" id="name" name="firstName" type="text" required>
+           
+            <label id="email-label" for="email">E-mail</label>
+            <input placeholder="Enter your email" id="email" name="email" type="email" required>
+
+            <label id="number-label" for="age">Age (optional) </label> 
+            <input id="number" placeholder="Age, only numbers" type="number" name="age" min="18" max="120" />
+
+            <label id="tel-label">Phone Number</label>
+            <input type="tel" id="tel-label" name="phoneNumber" placeholder="(123) 456-7890" 
+            pattern="^\(\d{3}\) \d{3}-\d{4}$" required>
+
+            <label for="dropdown">Select user type:</label>
+            <select id="dropdown" name="userType">
+                <option value="" disabled selected>Select an Option</option>
+                <option value="individual">Individual</option>
+                <option value="company">Company</option>
+                <option value="agency">Travel Agency</option>
+            </select>
+        
+            <hr>
+            <label>Selected your preferred contact method</label>
+            <div>
+                <label for="email-radio">
+                    <input id="email-radio" value="email" type="radio" name="contactMethod" class="inline" checked />
+                    E-mail
+                </label>
+            </div>
+            
+            <div>
+                <label for="sms-radio">
+                    <input id="sms-radio" value="SMS" type="radio" name="contactMethod" class="inline" />
+                    SMS
+                </label>
+            </div>
+
+            <div>
+                <label for="phone-radio">
+                    <input id="phone-radio" value="phone" type="radio" name="contactMethod" class="inline" />
+                    Phone
+                </label>
+            </div>
+
+            <hr>
+        
+            <p class="spacebefore">What would you like in your booking?</p>
+        
+            <div class="checkbox-container">
+                <label for="breakfast">
+                    <input type="checkbox" id="breakfast" name="services" value="breakfast" />
+                    Breakfast
+                </label>
+
+                <label for="laundry">
+                    <input type="checkbox" id="laundry" name="services" value="laundry" />
+                    Laundry
+                </label>
+
+                <label for="location">
+                    <input type="checkbox" id="location" name="services" value="station" />
+                    Near the station
+                </label>
+            </div>
+
+            <hr>
+            <label class="fontelabel" for="bio">Please let us know the reason for your stay so we can personalize your experience (e.g., business trip, vacation, special event, etc).
+                <textarea placeholder="Business trip, vacation, special event" id="bio" name="bio" rows="3" cols="30"></textarea>
+            </label>
+            <hr>
+
+            <label for="terms-and-conditions">
+                <input class="inline" id="terms-and-conditions" type="checkbox" required    
+                name="terms-and-conditions" value="Accept" /> 
+                I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+            </label>
+        </fieldset>
+        <input id="submit" type="submit" value="Submit" />
+    </form>
+</body>
+</html>
