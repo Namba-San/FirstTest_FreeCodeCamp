@@ -1,1 +1,145 @@
+body {
+    margin: 0;                     /* Remove margens padrão do navegador */
+    padding: 0;                    /* Remove o preenchimento padrão */
+    font-family: 'Arial';          /* Define uma fonte básica */
+    color: #ffffff;                   /* Cor padrão do texto */
+    font-size: 16px;               /* Tamanho da fonte desejada */
+    line-height: 1.6;              /* Define o espaçamento entre linhas */
+    max-width: 800px;             /* Define a largura máxima de um elemento */
+    margin: 0 auto;                /* Centraliza o elemento com largura máxima */
+    
+    /* Fundo padrão */
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), 
+        url('https://github.com/Namba-San/FirstTest_FreeCodeCamp/raw/main/images/Reserve.jpg');
+    background-size: cover;        /* A imagem cobre toda a área do elemento */
+    background-position: center;    /* Centraliza a imagem */
+    background-repeat: no-repeat;   /* Impede a repetição da imagem */
+    background-attachment: fixed;   /* A imagem de fundo fixa na tela */
+    min-height: 100vh;             /* Garante que o corpo ocupe pelo menos 100% da altura da tela */
+}
 
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) { /* Para telas menores que 768px */
+    body {
+        background-image: 
+            linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), 
+            url('https://github.com/Namba-San/FirstTest_FreeCodeCamp/raw/main/images/Reserve.jpg');
+        background-size: cover;     /* Mantém a imagem cobrindo o contêiner */
+        background-position: center; /* Centraliza a imagem */
+        background-attachment: scroll; /* Altera para scroll para melhor desempenho em dispositivos móveis */
+    }
+}
+
+h1{
+    text-align: center;
+    font-family: 'MontSerrat';
+    font-size: 3.5em;
+    margin-top: 5%;
+    margin-bottom: 0.5%;
+    ;
+}
+
+p{
+    text-align: center;
+    font-family: 'Popins';
+    font-size: 1.5em;
+    margin-top: 0;
+    line-height: 0;  
+    letter-spacing: 2px;
+}
+label {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    font-family: 'Popins';
+}
+fieldset {
+    border: none;
+    background-color:#c978356c  ;
+    padding: 30px;
+
+
+  }
+  input {
+    padding: 5px;
+    font-size: 1.2em;
+    width: 100%; /* Subtrai margens ou padding extras */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+select{
+    padding: 5px;
+    font-size: 1.2em;
+    width: 100%; /* Subtrai margens ou padding extras */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+    display: inline-block;
+  }
+div{
+    display: inline-block; 
+    margin-right: 10px;
+}
+
+textarea{
+    margin: 10px 0 0 0;
+    width: 100%;
+    min-height: 1em;
+    font-size: 1em;
+    font-family: 'Popins';
+    
+}
+
+.fontelabel{
+    text-align: center;
+    font-family: 'Popins';
+}
+
+.spacebefore{
+    margin-top:30px
+}
+
+hr{
+    color: #f9d0af;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #f9d0af;
+    border-color: #773602;
+    min-width: 300px;
+  }
+  a {
+    color: rgb(0, 255, 229); /* Cor do link não visitado */
+    text-decoration: none; /* Remove o sublinhado, se desejado */
+}
+
+a:visited {
+    color: rgb(255, 208, 0); /* Cor do link visitado */
+}
+
+a:hover {
+    color: rgb(255, 0, 0); /* Cor do link quando o mouse passa sobre ele */
+}
+
+.checkbox-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens que não cabem na linha atual passem para a próxima linha */
+    gap: 15px; /* Espaçamento entre os checkboxes */
+    justify-content: center; /* Centraliza os checkboxes horizontalmente */
+    align-items: center; /* Centraliza os checkboxes verticalmente, se necessário */
+}
+
+.checkbox-container label {
+    display: flex;
+    align-items: center; /* Alinha o texto e a caixa de seleção verticalmente */
+    white-space: nowrap; /* Impede que o texto quebre para a linha seguinte */
+}
